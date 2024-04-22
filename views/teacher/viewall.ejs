@@ -1,0 +1,43 @@
+<style>
+  body{
+    background-color: skyblue;
+
+  }
+</style>
+
+
+<div class="tableDiv" style="background-color: rgb(62, 89, 239); display: flex; justify-content: center;align-items: center; flex-direction: column; margin-top: 100px;">
+<h1 style=" text-align: center; font-family: 'Playfair Display';font-size: 42px; color: white; margin-bottom: 40px; " >All Students</h1>
+
+  <table class="table table-striped">
+    <thead>
+      <tr style="color: white;">
+        <th scope="col">Roll No.</th>
+        <th scope="col">Name</th>       
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Score</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <%  student.forEach(element => { %>
+            <tr class="head" style="color: white;">
+                <td><%= element.roll %></td>
+                <td><%= element.name %></td>               
+                <td><%= element.dob %></td>
+                <td><%= element.score %></td> 
+                <td>
+                  <a href="/teacher/edit/<%= element._id %> " ><img style="margin: 0px 5px;" src="https://img.icons8.com/material-outlined/30/000000/edit.png"/></a>
+                  <a href="/teacher/delete/<%= element._id %> "><img style="margin: 0px 5px;" src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png"/></a>
+                </td>
+              </tr>
+        <%}) %>
+    </tbody>
+
+  </table>
+<a href="/" class="btn btn-info" style="margin-top:5px; background-color: tomato; text-align: center;">Go To Home</a>
+<!-- <a href="/teacher/option" class="btn btn-info" style="margin-top:5px; background-color: tomato; text-align: center;">Go To Home</a> -->
+
+</div>
+

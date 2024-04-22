@@ -1,0 +1,28 @@
+
+
+<div style="display: flex; justify-content: space-between; align-items: center; flex-direction: column;">
+<h4 style="font-family: 'Playfair Display';font-size: 42px; color: gray; text-align: center; text-decoration: none; margin-top: 50px;  "  >Editing Form for Student :<span style="color: red;">  <%= user.name %> </span></h4>
+<form method="POST" class="addStu" autocomplete="off" style="width: 600px; margin-top: 40px;box-shadow: 10px 10px 5px lightblue; ">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name : </label>
+      <input type="text" name="name" required class="form-control" value="<%= user.name  %> " id="exampleInputEmail1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Roll No. : </label>
+        <input type="number" name="roll" value="<%= user.roll  %> " required class="form-control" id="exampleInputEmail1" >
+      </div>     
+     
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Date of Birth : </label>
+        <input type="date" name="dob" value="<%= user.dob  %> " required class="form-control" id="exampleInputEmail1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Score : </label>
+        <input type="number" name="score" value="<%= user.score  %> " required class="form-control" id="exampleInputEmail1">
+      </div>
+    <button type="submit" class="btn btn-success">Update</button>
+</form>
+<a href="/teacher/viewall" class="btn btn-info" style="margin-top:25px;">Back To Home</a>
+
+</div>
+
